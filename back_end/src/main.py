@@ -15,5 +15,4 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 app.mount("/api", StaticFiles(directory="../public"), name="images")

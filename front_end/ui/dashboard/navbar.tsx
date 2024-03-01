@@ -16,13 +16,13 @@ export default function DashNav() {
                     </Button>
                 </NavbarItem>
                 <NavbarItem>
-                    <Button as={Link} href="/dashboard" size="lg">
+                    <Button as={Link} href="/upload" size="lg">
                         <p className="font-bold">Upload</p>
                     </Button>
                 </NavbarItem>
                 <NavbarItem>
-                    <Button as={Link} href="/dashboard" size="lg">
-                        <p className="font-bold">None</p>
+                    <Button as={Link} href="/" size="lg">
+                        <p className="font-bold">Cover</p>
                     </Button>
                 </NavbarItem>
             </NavbarContent>

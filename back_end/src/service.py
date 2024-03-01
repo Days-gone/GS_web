@@ -2,21 +2,28 @@ import os
 from loguru import logger
 
 next_pic_id = -1
+
+
 def update_nextid():
     global next_pic_id
     next_pic_id += 1
 
+
 def ret_nextid():
-    if (next_pic_id == -1):
+    if next_pic_id == -1:
         init_nextid()
         return next_pic_id
     else:
         return next_pic_id
 
+
 def is_image_file(filename):
+    if filename.find('error') != -1:
+        return False
     image_extensions = ['.jpg', '.jpeg', '.png']
     ext = os.path.splitext(filename)[1].lower()
     return ext in image_extensions
+
 
 def init_nextid():
     global next_pic_id
