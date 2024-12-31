@@ -27,7 +27,7 @@ def is_image_file(filename):
 
 def init_nextid():
     global next_pic_id
-    des_folder = '../public'
+    des_folder = '../public/ori'
     pic_count = 0
 
     for root, dirs, files in os.walk(des_folder):

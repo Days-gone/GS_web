@@ -17,23 +17,23 @@ export default function Page() {
 
     const UploadFunction = () => {
         if (selectedFile) {
-            // const formData = new FormData();
-            // formData.append("file", selectedFile);
-            //
-            // fetch(server_url, {
-            //     method: 'POST',
-            //     body: formData
-            // })
-            //     .then(response => {
-            //         if (response.ok) {
-            //             console.log("File uploaded successfully!");
-            //         } else {
-            //             console.error("Upload Failed");
-            //         }
-            //     })
-            //     .catch(error => {
-            //         console.error("Error uploading file:", error);
-            //     });
+            const formData = new FormData();
+            formData.append("file", selectedFile);
+
+            fetch(server_url, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log("File uploaded successfully!");
+                    } else {
+                        console.error("Upload Failed");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error uploading file:", error);
+                });
             console.log("Got File");
         } else {
             console.log("No File selected");

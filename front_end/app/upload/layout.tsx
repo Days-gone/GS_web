@@ -1,4 +1,5 @@
 import DashNav from "@/ui/dashboard/navbar"
+import React from "react";
 
 export default function DashboardLayout({
                                             children,
