@@ -1,9 +1,10 @@
 # RouterAPI
-Server URL: 127.0.0.1/8000/api, every quest should have this serverURL and add the SuffixURL after it.  
+Server URL: `127.0.0.1/8000/api`, every quest should have this serverURL and add the SuffixURL after it.  
 For example if you wanna get the number of the images total, you should using GET to url: `http://127.0.0.1:8000/api/img_total`.
 
 ## Start
 ```bash
+cd src
 uvicorn main:app
 ```
 
