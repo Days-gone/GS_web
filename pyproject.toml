@@ -1,17 +1,15 @@
-[tool.poetry]
-name = "back-end"
+[project]
+name = "GS_web"
 version = "0.1.0"
-description = ""
-authors = ["Daysgone <79004213+Days-gone@users.noreply.github.com>"]
+description = "Default template for PDM package"
+authors = [
+    {name = "daysgone", email = "xymdaysgone@qq.com"},
+]
+dependencies = ["fastapi>=0.115.11", "loguru>=0.7.3", "python-multipart>=0.0.20", "uvicorn>=0.33.0"]
+requires-python = "==3.8.*"
 readme = "README.md"
+license = {text = "MIT"}
 
-[tool.poetry.dependencies]
-python = "^3.10"
-fastapi = "^0.109.2"
-dynaconf = "^3.2.4"
-uvicorn = "^0.27.1"
-loguru = "^0.7.2"
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.pdm]
+distribution = false

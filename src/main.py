@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import routers
+import uvicorn
 
 app = FastAPI()
 app.include_router(routers.router)
@@ -16,3 +17,6 @@ app.add_middleware(
 )
 
 app.mount("/api", StaticFiles(directory="../public"), name="images")
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -5,7 +5,7 @@ For example if you wanna get the number of the images total, you should using GE
 ## Start
 ```bash
 cd src
-uvicorn main:app
+pdm run main.py
 ```
 
 
